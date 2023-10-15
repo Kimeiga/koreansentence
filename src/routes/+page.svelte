@@ -94,7 +94,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 10px 5px;
+		margin: 10px 8px;
 	}
 	.romanization {
 		/* font-family: 'Noto Sans KR', sans-serif; */
@@ -104,8 +104,8 @@
 		/* font-family: 'Noto Sans KR', sans-serif; */
 		font-size: 4rem;
 		font-weight: bold;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 	}
 	.word-translation {
 		/* font-family: 'Noto Sans KR', sans-serif; */

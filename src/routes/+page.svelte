@@ -7,8 +7,16 @@
 	let translations = [];
 	let romanizedWords = [];
 
+	let copied = false; // Added this line
+
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(data.original_script);
+		copied = true; // Update the copied status
+
+		// Reset the copied status after 2 seconds
+		setTimeout(() => {
+			copied = false;
+		}, 2000);
 	};
 
 	$: if (data && data.original_script) {
@@ -78,7 +86,7 @@
 	</div>
 	<p class="translation">{data.english_translation}</p>
 	<!-- <hr /> -->
-	<button on:click={copyToClipboard}>Copy Korean Sentence</button>
+	<button on:click={copyToClipboard}>Copy Korean Sentence {copied ? '✔' : ''}</button>
 	<audio controls src={data.audio} />
 {:else}
 	<p>Loading...</p>
@@ -136,6 +144,10 @@
 
 	button:hover {
 		background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	button:active {
+		transform: translateY(4px);
 	}
 
 	audio {

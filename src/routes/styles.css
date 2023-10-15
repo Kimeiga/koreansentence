@@ -129,7 +129,7 @@ body {
 	/* to prevent overflow */
 	width: 100vw;
 	font-family: 'Gaegu', sans-serif;
-
+	height: 100vh;
 }
 
 html {

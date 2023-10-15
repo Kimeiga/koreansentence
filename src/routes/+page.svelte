@@ -77,7 +77,7 @@
 		{/each}
 	</div>
 	<p class="translation">{data.english_translation}</p>
-	<hr />
+	<!-- <hr /> -->
 	<button on:click={copyToClipboard}>Copy Korean Sentence</button>
 	<audio controls src={data.audio} />
 {:else}
@@ -94,22 +94,22 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 10px 8px;
+		margin: 0.6rem;
 	}
 	.romanization {
 		/* font-family: 'Noto Sans KR', sans-serif; */
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.korean-word {
 		/* font-family: 'Noto Sans KR', sans-serif; */
-		font-size: 4rem;
+		font-size: 3rem;
 		font-weight: bold;
-		margin-top: 5px;
-		margin-bottom: 5px;
+		/* margin-top: 0.1rem; */
+		/* margin-bottom: 0.1rem; */
 	}
 	.word-translation {
 		/* font-family: 'Noto Sans KR', sans-serif; */
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.translation {
 		/* font-family: 'Noto Sans KR', sans-serif; */
@@ -124,14 +124,18 @@
 		background-color: rgba(0, 0, 0, 0.5);
 		color: #ffffff;
 		border: none;
-		padding: 10px 20px;
-		font-size: 16px;
-		margin: 4px 2px;
+		padding: 0.4rem 0.8rem;
+		font-size: 1rem;
+		margin: 0.1rem;
 		cursor: pointer;
 		border-radius: 12px;
 		transition: 0.3s;
 		outline: none;
 		display: block;
+	}
+
+	button:hover {
+		background-color: rgba(0, 0, 0, 0.8);
 	}
 
 	audio {

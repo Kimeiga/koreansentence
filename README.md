@@ -1,41 +1,23 @@
-# create-svelte
+# Random Korean Sentence
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+From KSS dataset
 
-## Creating a project
+https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset
 
-If you're seeing this, you've probably already done this step. Congrats!
+Professionally voiced Korean sentences written by a native speaker. 12854 entries.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Then we run Google translate on each word to get word by word translation.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+I tried running Papago from Naver on each word but felt it was slightly less accurate.
 
-## Developing
+Naturally the best thing to do would be to get the linguistic breakdown of each word since there are particles, but that would be harder to display.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Clicking on a word takes you to the entry in Naver's Korean to English dictionary.
 
-```bash
-npm run dev
+We get the nouns from the english translation of the sentence with NLP and then use that to find a relevant background image with Unsplash.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Hosted on Vercel, using Svelte's server side code to fetch my decompressed version of the dataset on github with JSDelivr.
 
-## Building
+Found a nice handwritting font from Google Fonts to help you learn how to write naturally.
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# koreansentence
-# koreansentence
-# koreansentence
+Enjoy!

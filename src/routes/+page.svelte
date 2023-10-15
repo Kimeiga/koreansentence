@@ -92,7 +92,15 @@
 	<p>Loading...</p>
 {/if}
 
+<small id="link"
+	><a target="_blank" href="http://github.com/kimeiga/koreansentence">Github</a></small
+>
+
 <style>
+	#link {
+		position: fixed;
+		bottom: 10px;
+	}
 	.word-container-wrapper {
 		display: flex;
 		flex-wrap: wrap;

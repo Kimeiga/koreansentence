@@ -127,9 +127,10 @@ body {
 	/* font-family: serif, "SongTi SC", "KaiTi"; */
 
 	/* to prevent overflow */
-	width: 100vw;
+	/* width: 100vw; */
 	font-family: 'Gaegu', sans-serif;
 	height: 100vh;
+	padding: 0 0.5rem;
 }
 
 html {
